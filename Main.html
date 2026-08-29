@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<main>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script>
+            function updateTime() {
+                var currentTime = new Date().toLocaleString();
+                var timeText = document.querySelector("#timeElement");
+                timeText.innerHTML = currentTime;
+        }
+        setInterval(updateTime, 1000);
+        </script>
+        <div style="position: absoute;">
+            <canvas style=" height: 100%; top:100px; bottom: 0px; left: 0px; right: 0px; display: block; position: absolute; padding:0px; margin-top: 0px; margin-bottom: 0px; " >
+            </canvas>
+            <button class="clear-canvas">Clear Canvas</button>
+        </div>
+        <div style="display: flex; border:  solid; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-radius: 0px; border-width: 1px,5px,1px,5px;">
+            <div style="position: relative; display: inline-block; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-width: 1px;">
+                <div class="app-button" onclick="openWindow(document.getElementById('dropdown'))">Apps
+                    <div class="dropdown">
+                        <button style="margin-top: 5px; font-size: 15px;" onclick="openWindow(document.getElementById('notepad'))">Notepad</button>
+                        <button style="margin-top: 5px; font-size: 15px;" onclick="openWindow(document.getElementById('gallery'))"> Gallery</button>
+                    </div>
+                </div>
+            </div>
+            <p style=" margin-left: auto; margin-top: 10px; margin-bottom: 0px; font-size: 30px;">The WebBook</p>
+            <p style=" margin-top: 18px; margin-left: auto; margin-right: 20px; font-size: 18px;" id="timeElement">
+            Time
+            </p>
+        </div>
+        <div class="window" id="notepad" style="position: absolute; border:  solid; color: rgb(255, 255, 255); border-radius: 0px; border-width: 1px;">
+            <p  id="notepadheader" style="text-align: center; margin-bottom: 2px; margin-top: 5px;" > Notepad </p>
+            <textarea style="background-color: black; color: white; margin-top: 1px;">You can write here!</textarea>
+            <button style="position: absolute; top: 0px; right: 0px;" onclick="closeWindow(document.getElementById('notepad'))">X</button>
+        </div>
+        <div class="window" id="gallery" style="position: absolute; border:  solid; color: rgb(255, 255, 255); border-radius: 0px; border-width: 1px;">
+            <p id="galleryheader" style="text-align: center; margin-bottom: 2px; margin-top: 5px;" > Gallery </p>
+            <div class="slideshow-container">
+                <div class="slides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="Gallery/jonas-jaeken-Ihk7s6xlL30-unsplash.jpg" style="width:100%">
+                    <div class="text">Photo by <a href="https://unsplash.com/@jonasjaekenmedia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jonas Jaeken</a> on <a href="https://unsplash.com/photos/grayscale-photo-of-concrete-building-Ihk7s6xlL30?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
+                </div>
+                <div class="slides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="Gallery/klim-musalimov-NhXic1iPF4s-unsplash.jpg" style="width:100%">
+                    <div class="text">Photo by <a href="https://unsplash.com/@klim11?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Klim Musalimov</a> on <a href="https://unsplash.com/photos/cathedral-of-the-immaculate-conception-spires-zTQo9KCOXpI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
+                </div>
+                <div class="slides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="Gallery/leonardo-yip-rVcuY3LfH_Q-unsplash.jpg" style="width:100%">
+                    <div class="text">Photo by <a href="https://unsplash.com/@yipleonardo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Leonardo Yip</a> on <a href="https://unsplash.com/photos/buildings-and-river-with-boat-rVcuY3LfH_Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
+                </div>
+                <div class="slides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="Gallery/michael-mouritz-WXX_DhjlmD4-unsplash.jpg" style="width:100%">
+                    <div class="text">Photo by <a href="https://unsplash.com/@michael_mouritz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michael Mouritz</a> on <a href="https://unsplash.com/photos/gray-road-in-between-trees-in-grayscale-photography-WXX_DhjlmD4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <button style="position: absolute; top: 0px; right: 0px;" onclick="closeWindow(document.getElementById('gallery'))">X</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</main>

@@ -5,3 +5,9 @@ A gothic Deathnote-inspired web os that features:
 - Background that can be draw on
 - Notepad window for writing text in
 - Gallery window showing a slideshow of 4 gothic photos from unsplash
+
+To run locally clone repo and run Entry.html in your browser.
+
+
+Example image:
+![image](Example.png)

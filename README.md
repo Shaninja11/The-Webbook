@@ -10,6 +10,11 @@ A gothic Deathnote-inspired web os that features:
 
 To run locally clone repo and run Entry.html in your browser.
 
+Credits:
+- Drawing script based of script by CodingSource - [Link text] (https://www.youtube.com/watch?v=0kGFU1UyQlg)
+- Window-dragging and gallery slideshow function based of scripts provided by w3 school
+
+!No AI was used - script.js was based off the above scripts (and edited by me) NOT AI!
 
 Example image:
 ![image](Example.png)
